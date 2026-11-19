@@ -1,0 +1,29 @@
+{
+  "name": "@aevum/agent-pay-sdk",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Reusable TypeScript SDK for Aevum PayGuard scoped session keys, ERC-8004 agent discovery, and tUSD8 escrow settlement on QDay Aevum Testnet",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "ethers": "^6.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "tsx": "^4.23.13",
+    "typescript": "~5.9.3"
+  }
+}
+

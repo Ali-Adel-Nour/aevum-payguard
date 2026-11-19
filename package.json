@@ -1,0 +1,29 @@
+{
+  "name": "aevum-payguard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aevum PayGuard: Autonomous Agent Smart Vault, Scoped Session Keys & ERC-8004 tUSD8 Escrow Protocol on QDay Aevum Testnet",
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "contracts",
+    "sdk",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "compile:contracts": "npm run compile --workspace=@aevum/contracts",
+    "test:contracts": "npm test --workspace=@aevum/contracts",
+    "deploy:aevum": "npm run deploy:aevum --workspace=@aevum/contracts",
+    "build:sdk": "npm run build --workspace=@aevum/agent-pay-sdk",
+    "test:sdk": "npm test --workspace=@aevum/agent-pay-sdk",
+    "dev:backend": "npm run dev --workspace=@aevum/backend",
+    "test:backend": "npm test --workspace=@aevum/backend",
+    "dev:frontend": "npm run dev --workspace=@aevum/frontend",
+    "build:frontend": "npm run build --workspace=@aevum/frontend"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
+
