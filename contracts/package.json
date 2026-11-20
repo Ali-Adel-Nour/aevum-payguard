@@ -2,29 +2,25 @@
   "name": "@aevum/contracts",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy:aevum": "tsx scripts/deploy-aevum.ts"
+    "deploy:aevum": "hardhat run scripts/deploy-aevum.ts --network aevumTestnet",
+    "deploy:local": "hardhat run scripts/deploy-aevum.ts --network hardhat"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.6.1",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-ethers": "^4.0.15",
-    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.7",
-    "@types/chai": "^5.2.3",
-    "@types/chai-as-promised": "^8.0.2",
-    "@types/mocha": "^10.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^22.20.1",
-    "chai": "^6.2.2",
-    "ethers": "^6.17.0",
-    "hardhat": "^3.15.0",
-    "mocha": "^11.8.0",
-    "tsx": "^4.23.13",
+    "chai": "^4.4.1",
+    "ethers": "^6.13.0",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.9.3"
   }
 }
-
