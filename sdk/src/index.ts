@@ -1,4 +1,51 @@
 export { AEVUM_TESTNET_CONFIG, type AevumTestnetConfig } from "./constants.js";
+export {
+  ERC20_ABI,
+  IDENTITY_REGISTRY_ABI,
+  REPUTATION_REGISTRY_ABI,
+  VALIDATION_REGISTRY_ABI,
+  AGENT_VAULT_ABI,
+  ESCROW_COURT_ABI,
+} from "./abis.js";
+export {
+  decodePayGuardError,
+  redactSensitiveText,
+  type DecodedPayGuardError,
+} from "./errors.js";
+export {
+  canonicalize,
+  hashCanonicalPayload,
+  computeVerdictHash,
+  verifyVerdictAudit,
+  EIP712_VERDICT_TYPES,
+  buildEscrowEip712Domain,
+  signEscrowVerdict,
+  recoverVerdictSigner,
+  type CanonicalVerdictPayload,
+  type EscrowEip712Domain,
+  type SignVerdictParams,
+} from "./canonical.js";
+export {
+  isDeterministicRevert,
+  withRetry,
+  assertExpectedChainId,
+  assertValidAddress,
+  waitForTxReceipt,
+  type RetryOptions,
+} from "./resilientRpc.js";
+export {
+  ERC8004Client,
+  AevumVaultClient,
+  AevumEscrowClient,
+  AevumPayGuardSDK,
+  type PreflightCheckResult,
+  type AevumSDKInitOptions,
+} from "./clients.js";
+export {
+  AevumMcpHandler,
+  type JsonRpcRequest,
+  type JsonRpcResponse,
+} from "./mcp-server.js";
 
 /**
  * Policy parameters governing an agent's scoped session key inside AevumAgentVault.
@@ -61,4 +108,3 @@ export interface PromptFirewallResult {
   matchedPatterns: string[];
   sanitizedDeliverable: string;
 }
-
